@@ -26,5 +26,22 @@ function callbackFunctionOnSuccessfulSubscription() {
 window.location= 'https://www.mb102.com/lnk.asp?o=15945&c=918271&a=185330&k=4142080F0B2E77F454428A192C6693DB&l=17039'
 }
 </script>
+    <script>
+    _pcq.push(['APIReady', callbackFunction]);
+
+//some code here
+
+function callbackFunction() {
+      console.log(pushcrew.subscriberId); // will return something like this if current user is a subscriber '1c5d546172cfb4be65a8d51b047c4804'
+
+  console.log(pushcrew.subscriberId); // will return false(boolean) if user is not subscribed to push notifications
+
+  console.log(pushcrew.subscriberId); // will return -1(integer) if user has blocked push notifications from your website   
+}
+    </script>
   </head>
 </html>
+
+
+window._pcq = window._pcq || [];
+_pcq.push(['APIReady', callbackOnSuccessFunction,callbackOnFailureFunction])
